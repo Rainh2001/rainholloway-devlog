@@ -127,7 +127,7 @@ header {
     position: absolute;
     width: 250px;
     height: auto;
-    transform: translateY(-50px);
+    /* transform: translateY(-50px); */
 }
 
 .username {

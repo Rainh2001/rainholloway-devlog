@@ -25,7 +25,7 @@ export default function App() {
         <div className="content-container">
             <div className="about-me">
                 <div className="profile-pic">
-                    <img src={profile || "https://avatars.githubusercontent.com/u/30580324?v=4"}/>
+                    <img src="https://avatars.githubusercontent.com/u/30580324?v=4"/>
                 </div>
                 <div className="username profile-margin-top">Rainh2001</div>
                 <div className="description profile-margin-top lightgrey">
