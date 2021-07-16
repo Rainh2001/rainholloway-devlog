@@ -1,7 +1,5 @@
 import React from 'react';
 
-import profile from './assets/profile.JPG';
-
 import './App.css'
 
 import GameOfLife, { meta as GameOfLifeMeta } from './projects/GameOfLife/GameOfLife';
@@ -10,7 +8,7 @@ import InfixToPostfix, { meta as InfixToPostfixMeta } from './projects/InfixToPo
 
 export default function App() {
 
-    let animationTime = 6;
+    let animationTime = 0.5;
     let projects = [
         [GameOfLifeMeta], [DijkstraGraphMeta], [InfixToPostfixMeta]
     ];
@@ -19,7 +17,7 @@ export default function App() {
         <>
         <header>
             <div>
-                <span class="header-text code1">{"<RainHolloway />"}</span>
+                <span className="header-text code1">{"<RainHolloway />"}</span>
             </div>
         </header>
         <div className="content-container">
@@ -42,16 +40,23 @@ export default function App() {
                 </div>
             </div>
             <div className="project-container">
+                {/* <div style={{border: '1px solid blue', background: 'red', width: '700px', height: '10rem'}}></div>
+                <div style={{border: '1px solid blue', background: 'red', width: '700px', height: '10rem'}}></div>
+                <div style={{border: '1px solid blue', background: 'red', width: '700px', height: '10rem'}}></div>
+                <div style={{border: '1px solid blue', background: 'red', width: '700px', height: '10rem'}}></div> */}
                 {
-                    projects.map(project => {
-                        return <div
+                    projects.slice().reverse().map(project => {
+                        animationTime += 0.1;
+                        return <div className="project-transform"><div
                         key={project[0].title}
                         className="project"
-                        style={{ animationDelay: `0.${++animationTime}s` }}
+                        style={{ animationDelay: `${animationTime}s` }}
                         >
                             <p className="project-title">{ project[0].title }</p>
                             <p className="project-description">{ project[0].description }</p>
-                        </div>
+
+                            <a target="_blank" href="https://www.google.com.au">{"<<<"} Check it out {">>>"}</a>
+                        </div></div>
                     })
                 }
             </div>

@@ -83,6 +83,7 @@ header {
     display: flex;
     justify-content: center;
     align-items: flex-start;
+    flex-wrap: wrap;
     flex-direction: row;
 }   
 
@@ -143,25 +144,24 @@ header {
     font-size: 0.9rem;
 }
 
-.github a {
-    color: var(--green);
+a {
+    color: var(--purple);
     transition: color 0.2s;
 }
 
-.github a:visited {
+a:visited {
     color: var(--purple);
 }
 
-.github a:hover {
+a:hover {
     color: var(--green);
 }
 
 .project-container {
-    width: clamp(500px, 600px, 100%);
+    width: clamp(500px, 100%, 700px);
 }
 
 .project {
-    width: 100%;
     border: 1px solid white;
     box-shadow: -3px 3px 0px var(--purple);
     margin-bottom: 15px;
@@ -186,4 +186,20 @@ header {
 
 .project-description {
     font-size: 0.96rem;
+}
+
+.project a {
+    margin-top: 0.4rem;
+    font-size: 0.9rem;
+    display: flex;
+    justify-content: flex-end;
+    justify-self: flex-end;
+}
+
+.project-transform {
+    transition: transform 0.2s;
+}
+
+.project-transform:hover {
+    transform: translateX(20px);
 }
