@@ -3,3 +3,187 @@
     padding: 0;
     border-collapse: collapse;
 }
+
+:root {
+    --green: lime;
+    --purple: #aa00ff;
+    --main-width: clamp(0px, 620px, 100%);
+}
+
+body {
+    background: black;
+    color: white;
+    /* font-family: Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif; */
+    font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New', monospace;
+}
+
+.code1 {
+    font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New', monospace;
+}
+
+@keyframes rotate-in-x-down {
+    from {
+        transform: translateY(-12px) rotateX(-90deg);
+    }
+    to {
+        transform: translateY(0px) rotateX(0);
+    }
+}
+
+@keyframes slide-in-left {
+    0% { transform: translateX(-50vw) rotateZ(-180deg); }
+    100% { transform: translateX(0px); visibility: visible;}
+}
+
+@keyframes slide-in-bottom {
+    from {
+        opacity: 0;
+        transform: translateY(3vw);
+    }
+    to {
+        opacity: 100;
+        transform: translateY(0px);
+    }
+}
+
+header {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: var(--main-width);
+    margin: 1rem auto;
+    transform: rotateX(-90deg);
+    animation-name: rotate-in-x-down;
+    animation-duration: 0.5s;
+    animation-delay: 0.5s;
+    animation-iteration-count: 1;
+    -webkit-animation-fill-mode: forwards; /* Chrome 16+, Safari 4+ */
+    -moz-animation-fill-mode: forwards;    /* FF 5+ */
+    -o-animation-fill-mode: forwards;      /* Not implemented yet */
+    -ms-animation-fill-mode: forwards;     /* IE 10+ */
+    animation-fill-mode: forwards;
+}
+
+.header-text-shadow {
+    text-shadow: -3px 0px 1px var(--green), 3px 0px 1px var(--purple);
+}
+
+.header-text {
+    text-shadow: -3px 0px 1px var(--green), 3px 0px 1px var(--purple);
+    font-size: 2.8rem;
+}
+
+@media only screen and (max-width: 400px){
+    .header-text {
+        font-size: 9.5vw;
+    }
+}
+
+.content-container {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    flex-direction: row;
+}   
+
+.green-purple-shadow {
+    box-shadow: 1px 0px var(--purple), -1px 0px var(--green), 0px -1px var(--green), 0px 1px var(--purple);
+    border: 1px solid white;
+}
+
+.about-me {
+    /* transform: translateX(-100vw); */
+    visibility: hidden;
+    width: 270px;
+    border-radius: 3px;
+    padding: 1rem;
+    animation-name: slide-in-left;
+    animation-duration: 0.8s;
+    animation-delay: 0.7s;
+    animation-iteration-count: 1;
+    -webkit-animation-fill-mode: forwards; /* Chrome 16+, Safari 4+ */
+    -moz-animation-fill-mode: forwards;    /* FF 5+ */
+    -o-animation-fill-mode: forwards;      /* Not implemented yet */
+    -ms-animation-fill-mode: forwards;     /* IE 10+ */
+    animation-fill-mode: forwards;
+    animation-timing-function: ease-out;
+}
+
+.profile-margin-top {
+    margin-top: 0.8rem;
+}
+
+.profile-pic {
+    width: 250px;
+    height: 250px;
+    overflow: hidden;
+    position: relative;
+    border: 1px solid white;
+    margin-bottom: 1rem;
+    box-shadow: -3px 3px 0px var(--green);
+}
+
+.profile-pic img {
+    position: absolute;
+    width: 250px;
+    height: auto;
+    transform: translateY(-50px);
+}
+
+.username {
+    font-size: 1.3rem;
+    text-shadow: -1px 0px var(--green), 2px 0px var(--purple);
+}
+
+.lightgrey {
+    color: rgb(173, 173, 173);
+}
+
+.smaller-font {
+    font-size: 0.9rem;
+}
+
+.github a {
+    color: var(--green);
+    transition: color 0.2s;
+}
+
+.github a:visited {
+    color: var(--purple);
+}
+
+.github a:hover {
+    color: var(--green);
+}
+
+.project-container {
+    width: clamp(500px, 600px, 100%);
+}
+
+.project {
+    width: 100%;
+    border: 1px solid white;
+    box-shadow: -3px 3px 0px var(--purple);
+    margin-bottom: 15px;
+    padding: 0.5rem;
+
+    transform: translateY(3vw);
+    opacity: 0;
+    animation-name: slide-in-bottom;
+    animation-duration: 0.5s;
+    animation-iteration-count: 1;
+    -webkit-animation-fill-mode: forwards; /* Chrome 16+, Safari 4+ */
+    -moz-animation-fill-mode: forwards;    /* FF 5+ */
+    -o-animation-fill-mode: forwards;      /* Not implemented yet */
+    -ms-animation-fill-mode: forwards;     /* IE 10+ */
+    animation-fill-mode: forwards;
+}
+
+.project-title {
+    margin-bottom: 0.4rem;
+    text-shadow: -1px 0px var(--green), 2px 0px var(--purple);
+}
+
+.project-description {
+    font-size: 0.96rem;
+}
