@@ -2,7 +2,8 @@ import React, { useCallback, useEffect, useMemo, useRef, useState } from 'react'
 
 export let meta = {
     title: "Conway's Game of Life",
-    description: "A pure cellular automaton devised by the British mathematician John Horton Conway in 1970. This is one of the many simulations of evolution; interact with the game of life by creating an intial configuration and observe."
+    description: "A pure cellular automaton devised by the British mathematician John Horton Conway in 1970. This is one of the many simulations of evolution; interact with the game of life by creating an intial configuration and observe.",
+    link: "https://main.d1xd2yhlmkncjb.amplifyapp.com/"
 };
 
 class Cell {

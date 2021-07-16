@@ -5,7 +5,8 @@ import './DijkstraGraph.css';
 
 export let meta = {
     title: "Dijkstra Least-Cost Path",
-    description: "Interactive graph (the data structure) creation interface that allows the configuration of a custom interconnected graph. Dijkstra's algorithm is simulated on the constructed graph to reveal the true least-cost path."
+    description: "Interactive graph (the data structure) creation interface that allows the configuration of a custom interconnected graph. Dijkstra's algorithm is simulated on the constructed graph to reveal the true least-cost path.",
+    link: "https://main.db5tzijstq4jc.amplifyapp.com/"
 };
 
 function useWindowSize() {

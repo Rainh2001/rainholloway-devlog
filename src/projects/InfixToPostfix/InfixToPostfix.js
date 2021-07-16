@@ -4,7 +4,8 @@ import './InfixToPostfix.css'
 
 export let meta = {
     title: "Infix To Postfix Algebreic Conversion",
-    description: "Conversion of algebreic equations from the standard infix notation, to a much more computer interpretable postfix notation with the manipulation of stack data structures"
+    description: "Conversion of algebreic equations from the standard infix notation, to a much more computer interpretable postfix notation with the manipulation of stack data structures",
+    link: "https://main.d2q5hpyupt84lv.amplifyapp.com/"
 };
 
 class Stack {

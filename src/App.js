@@ -55,7 +55,7 @@ export default function App() {
                             <p className="project-title">{ project[0].title }</p>
                             <p className="project-description">{ project[0].description }</p>
 
-                            <a target="_blank" href="https://www.google.com.au">{"<<<"} Check it out {">>>"}</a>
+                            <a target="_blank" href={project[0].link}>{"<<<"} Check it out {">>>"}</a>
                         </div></div>
                     })
                 }
